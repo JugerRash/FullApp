@@ -3,20 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E96935BA0F3D816ACE0923B /* Pods_FullApp_FullAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F66B87EE89FB74C27248D4 /* Pods_FullApp_FullAppUITests.framework */; };
 		3502E706246B771400AA3F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E705246B771400AA3F8F /* AppDelegate.swift */; };
 		3502E708246B771400AA3F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E707246B771400AA3F8F /* SceneDelegate.swift */; };
-		3502E70A246B771400AA3F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E709246B771400AA3F8F /* ViewController.swift */; };
 		3502E70D246B771400AA3F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3502E70B246B771400AA3F8F /* Main.storyboard */; };
 		3502E70F246B772600AA3F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3502E70E246B772600AA3F8F /* Assets.xcassets */; };
 		3502E712246B772600AA3F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3502E710246B772600AA3F8F /* LaunchScreen.storyboard */; };
 		3502E71D246B772600AA3F8F /* FullAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E71C246B772600AA3F8F /* FullAppTests.swift */; };
 		3502E728246B772600AA3F8F /* FullAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E727246B772600AA3F8F /* FullAppUITests.swift */; };
-		3502E73C246B823700AA3F8F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502E73B246B823700AA3F8F /* SWRevealViewController.m */; };
+		35B59287246CC0AA0069185C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B59286246CC0AA0069185C /* ChatVC.swift */; };
+		35B59289246CC0BB0069185C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B59288246CC0BB0069185C /* ChannelVC.swift */; };
+		35B5928C246CCE1C0069185C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5928A246CCE1C0069185C /* SWRevealViewController.m */; };
 		48E6E9905A6F9981208D6C88 /* Pods_FullApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC7D0016DBA6948DDA86738 /* Pods_FullApp.framework */; };
 		B1761FDB26C4B84A56B6A1B9 /* Pods_FullAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10933A07AF9894274C960E7D /* Pods_FullAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +45,6 @@
 		3502E702246B771400AA3F8F /* FullApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3502E705246B771400AA3F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3502E707246B771400AA3F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
-		3502E709246B771400AA3F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		3502E70C246B771400AA3F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3502E70E246B772600AA3F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3502E711246B772600AA3F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,8 +56,10 @@
 		3502E727246B772600AA3F8F /* FullAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAppUITests.swift; sourceTree = "<group>"; };
 		3502E729246B772600AA3F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3502E739246B823500AA3F8F /* FullApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FullApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		3502E73A246B823700AA3F8F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		3502E73B246B823700AA3F8F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		35B59286246CC0AA0069185C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		35B59288246CC0BB0069185C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		35B5928A246CCE1C0069185C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		35B5928B246CCE1C0069185C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		471A2DAA905CCD186E7FF66B /* Pods-FullApp-FullAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullApp-FullAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FullApp-FullAppUITests/Pods-FullApp-FullAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4F6899F90753D2AAFB04E213 /* Pods-FullAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FullAppTests/Pods-FullAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		905E5A095067EA6D774954BB /* Pods-FullAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullAppTests.release.xcconfig"; path = "Target Support Files/Pods-FullAppTests/Pods-FullAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +157,8 @@
 			children = (
 				3502E705246B771400AA3F8F /* AppDelegate.swift */,
 				3502E707246B771400AA3F8F /* SceneDelegate.swift */,
-				3502E709246B771400AA3F8F /* ViewController.swift */,
+				35B59286246CC0AA0069185C /* ChatVC.swift */,
+				35B59288246CC0BB0069185C /* ChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,8 +180,8 @@
 		3502E738246B776600AA3F8F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3502E73A246B823700AA3F8F /* SWRevealViewController.h */,
-				3502E73B246B823700AA3F8F /* SWRevealViewController.m */,
+				35B5928B246CCE1C0069185C /* SWRevealViewController.h */,
+				35B5928A246CCE1C0069185C /* SWRevealViewController.m */,
 				3502E739246B823500AA3F8F /* FullApp-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
@@ -204,7 +207,6 @@
 				4F6899F90753D2AAFB04E213 /* Pods-FullAppTests.debug.xcconfig */,
 				905E5A095067EA6D774954BB /* Pods-FullAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -448,10 +450,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3502E70A246B771400AA3F8F /* ViewController.swift in Sources */,
+				35B59287246CC0AA0069185C /* ChatVC.swift in Sources */,
 				3502E706246B771400AA3F8F /* AppDelegate.swift in Sources */,
+				35B5928C246CCE1C0069185C /* SWRevealViewController.m in Sources */,
 				3502E708246B771400AA3F8F /* SceneDelegate.swift in Sources */,
-				3502E73C246B823700AA3F8F /* SWRevealViewController.m in Sources */,
+				35B59289246CC0BB0069185C /* ChannelVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D9MQ4SU7F;
 				INFOPLIST_FILE = FullApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,7 +641,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FullApp/Supporting Files/FullApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -651,6 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D9MQ4SU7F;
 				INFOPLIST_FILE = FullApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,7 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.juger.firstProject.FullApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FullApp/Supporting Files/FullApp-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
