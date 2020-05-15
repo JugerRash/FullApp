@@ -21,6 +21,9 @@ class ChatVC: UIViewController {
             let tapGesture = self.revealViewController()?.tapGestureRecognizer() else { return }
         self.view.addGestureRecognizer(panGesture)
         self.view.addGestureRecognizer(tapGesture)
+        
+        self.view.accessibilityIdentifier = TestViewIDs.ChatVCID
+        sideMenuBtn.accessibilityIdentifier = TestButtonViewIDs.SideMenuBtnViewID
     }
 
 }
