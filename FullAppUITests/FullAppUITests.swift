@@ -51,10 +51,39 @@ class FullAppUITests: XCTestCase {
         XCTAssert(app.isDisplaySideMenuVC)
     }
     
+    func testSignupBtn_WhenTapped_CreateAccountVCDisplayed() {
+        app.launch()
+        displayLoginVC()
+        app.buttons[TestButtonViewIDs.SignupBtnVIewID].tap()
+        XCTAssert(app.isDisplayCreateAccountVC)
+    }
+    
+    func testExitBtn_WhenTapped_UnwindSegueDisplayed() {
+        app.launch()
+        displayLoginVC()
+        app.buttons[TestButtonViewIDs.SignupBtnVIewID].tap()
+        app.buttons[TestButtonViewIDs.ExitBtnToUnwindViewID].tap()
+        XCTAssert(app.isDisplaySideMenuVC)
+    }
+    
+    func testPickAvatarBtn_WhenTapped_AvatarPickerVCDisplayed() {
+        app.launch()
+        
+        displayLoginVC()
+        
+        app.buttons[TestButtonViewIDs.SignupBtnVIewID].tap()
+        app.buttons[TestButtonViewIDs.PickAvatarBtnViewID].tap()
+        
+        XCTAssert(app.isDisplayAvatarPickerVC)
+        
+    }
+    
     func displayLoginVC() {
         app.buttons[TestButtonViewIDs.SideMenuBtnViewID].tap()
         app.buttons[TestButtonViewIDs.LoginBtnViewID].tap()
     }
+    
+    
     
 }
 
@@ -68,5 +97,11 @@ extension XCUIApplication {
     }
     var isDisplayLoginVC : Bool {
         return otherElements[TestViewIDs.LoginVCViewID].exists
+    }
+    var isDisplayCreateAccountVC : Bool {
+        return otherElements[TestViewIDs.CreateAccountVCViewID].exists
+    }
+    var isDisplayAvatarPickerVC : Bool {
+        return otherElements[TestViewIDs.AvatarPickerVCViewID].exists
     }
 }

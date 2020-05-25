@@ -29,7 +29,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func signupBtnWasPressed(_ sender : UIButton) {
-        
+        performSegue(withIdentifier: Segues.ToCreateAccountVC, sender: self)
     }
 
 }

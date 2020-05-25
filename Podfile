@@ -8,6 +8,7 @@ target 'FullApp' do
   # Pods for FullApp
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'IQKeyboardManagerSwift'
     
   target 'FullAppTests' do
     inherit! :search_paths
