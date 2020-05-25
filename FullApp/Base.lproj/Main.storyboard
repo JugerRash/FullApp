@@ -310,6 +310,10 @@
                                     <action selector="signupBtnWasPressed:" destination="IbL-SJ-y7G" eventType="touchUpInside" id="rLq-SZ-zVP"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-5u-uP1">
+                                <rect key="frame" x="188.5" y="188" width="37" height="37"/>
+                                <color key="color" red="0.32549019610000002" green="0.41960784309999999" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="LoginVCViewID"/>
@@ -320,6 +324,8 @@
                             <constraint firstItem="8AQ-Iz-GeA" firstAttribute="top" secondItem="Ug7-2h-Mjd" secondAttribute="top" constant="70" id="AMt-GQ-hgy"/>
                             <constraint firstItem="0Zk-am-U7K" firstAttribute="top" secondItem="Jya-aV-ku5" secondAttribute="bottom" id="FEK-gD-mWF"/>
                             <constraint firstItem="0Zk-am-U7K" firstAttribute="centerX" secondItem="r0P-h1-8zj" secondAttribute="centerX" id="N4m-I5-RDQ"/>
+                            <constraint firstItem="Py5-5u-uP1" firstAttribute="centerX" secondItem="r0P-h1-8zj" secondAttribute="centerX" id="VN6-Zv-ebd"/>
+                            <constraint firstItem="Jya-aV-ku5" firstAttribute="top" secondItem="Py5-5u-uP1" secondAttribute="bottom" constant="50" id="b9Q-6Z-X8Y"/>
                             <constraint firstItem="l1h-Yu-veo" firstAttribute="centerX" secondItem="r0P-h1-8zj" secondAttribute="centerX" id="bde-Xd-zhU"/>
                             <constraint firstItem="8AQ-Iz-GeA" firstAttribute="centerX" secondItem="r0P-h1-8zj" secondAttribute="centerX" id="obM-aa-K3w"/>
                             <constraint firstItem="mbY-Bh-sLJ" firstAttribute="top" secondItem="Ug7-2h-Mjd" secondAttribute="top" constant="10" id="vLY-qC-0FE"/>
@@ -330,6 +336,7 @@
                     <navigationItem key="navigationItem" id="JLj-ip-fR4"/>
                     <connections>
                         <outlet property="passwordTxt" destination="9X4-mD-gxf" id="oSn-ww-jfN"/>
+                        <outlet property="spinner" destination="Py5-5u-uP1" id="1cn-ES-q15"/>
                         <outlet property="usernameTxt" destination="edl-S0-JBF" id="edy-Fo-qEV"/>
                         <segue destination="Xri-N3-MoW" kind="show" identifier="ToCreateAccountVC" id="T51-Xq-ANL"/>
                     </connections>

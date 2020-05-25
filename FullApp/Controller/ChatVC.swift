@@ -24,6 +24,18 @@ class ChatVC: UIViewController {
         
         self.view.accessibilityIdentifier = TestViewIDs.ChatVCID
         sideMenuBtn.accessibilityIdentifier = TestButtonViewIDs.SideMenuBtnViewID
+        
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail { (success) in
+                if success {
+                    NotificationCenter.default.post(name: NotificationCenterConstants.UserDataChangedNotification, object: nil)
+                } else {
+                    self.showAlert(msg: "Failed to login", vc: self)
+                    return
+                }
+            }
+        }
+        
     }
 
 }

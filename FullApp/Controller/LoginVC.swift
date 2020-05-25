@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
     //MARK: - Outlets
     @IBOutlet private weak var usernameTxt : UITextField!
     @IBOutlet private weak var passwordTxt : UITextField!
+    @IBOutlet private weak var spinner : UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,32 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginBtnWasPressed(_ sender : UIButton) {
+        spinner.startAnimating()
+        guard let email = usernameTxt.text , email.isNotEmpty ,
+            let password = passwordTxt.text , password.isNotEmpty else {
+                spinner.stopAnimating()
+                showAlert(msg: "Please fill all fields above.", vc: self)
+                return
+        }
+        
+        AuthService.instance.loginUser(email: email, password: password) { (success) in
+            if success {
+                AuthService.instance.findUserByEmail { (success) in
+                    if success {
+                        self.spinner.stopAnimating()
+                        NotificationCenter.default.post(name: NotificationCenterConstants.UserDataChangedNotification, object: nil)
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        self.spinner.stopAnimating()
+                        self.showAlert(msg: "Failed to logi", vc: self)
+                    }
+                }
+            } else {
+                self.showAlert(msg: "Failed to login.", vc: self)
+                self.spinner.stopAnimating()
+                return
+            }
+        }
         
     }
     

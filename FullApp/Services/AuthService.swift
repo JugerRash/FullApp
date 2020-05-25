@@ -108,11 +108,6 @@ class AuthService {
     
     func createUser(name : String ,email : String ,avatarName : String ,avatarColor : String , completion : @escaping CompletionHandler) {
         
-        let header = [
-            "Authorization" : "Bearer \(self.authToken)",
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
         let body : [String : Any] = [
             "name" : name,
             "email" : email,
@@ -120,7 +115,7 @@ class AuthService {
             "avatarColor" : avatarColor
         ]
         
-        Alamofire.request(Urls.AddUserUrl, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+        Alamofire.request(Urls.AddUserUrl, method: .post, parameters: body, encoding: JSONEncoding.default, headers: Headers.BearerHeader).responseJSON { (response) in
             if let error = response.result.error {
                 completion(false)
                 debugPrint(error.localizedDescription)
@@ -141,6 +136,39 @@ class AuthService {
                 debugPrint(error.localizedDescription)
                 return
             }
+        }
+    }
+    
+    
+    func findUserByEmail(completion : @escaping CompletionHandler) {
+        
+        let url = "\(Urls.FindUserByEmail)\(userEmail)"
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: Headers.BearerHeader).responseJSON { (response) in
+            if let error = response.result.error {
+                debugPrint(error)
+                completion(false)
+                return
+            }
+            
+            guard let data = response.data else {
+                completion(false)
+                return
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                let userData = try jsonDecoder.decode(UserData.self, from: data )
+                UserDataService.instance.setUserData(userData: userData)
+                completion(true)
+            } catch {
+                debugPrint(error)
+                completion(false)
+                return
+            }
+            
+            
         }
     }
     

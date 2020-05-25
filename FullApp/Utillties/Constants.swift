@@ -60,12 +60,17 @@ struct Urls {
     static let RegisterUserUrl = "\(BaseUrl)account/register"
     static let LoginUserUrl = "\(BaseUrl)account/login"
     static let AddUserUrl = "\(BaseUrl)user/add"
+    static let FindUserByEmail = "\(BaseUrl)user/byEmail/"
 }
 
 
 //MARK: - Headers
 struct Headers {
     static let LoginRegisterHeader = [
+            "Content-Type" : "application/json; charset=utf-8"
+        ]
+    static let BearerHeader = [
+        "Authorization" : "Bearer \(AuthService.instance.authToken)",
             "Content-Type" : "application/json; charset=utf-8"
         ]
 }

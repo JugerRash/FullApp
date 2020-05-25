@@ -30,6 +30,8 @@
 		35BB6384246E06B700660D0F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB6383246E06B700660D0F /* LoginVC.swift */; };
 		35BB6385246E17FA00660D0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB6381246E01BC00660D0F /* Constants.swift */; };
 		35BB6386246E17FB00660D0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB6381246E01BC00660D0F /* Constants.swift */; };
+		35CEE310247BDC29002AD70C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEE30E247BDC29002AD70C /* ProfileVC.swift */; };
+		35CEE311247BDC29002AD70C /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35CEE30F247BDC29002AD70C /* ProfileVC.xib */; };
 		35EEC2E12475E94000E37278 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EEC2E02475E94000E37278 /* UserDataService.swift */; };
 		35EEC2E32475EB0300E37278 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EEC2E22475EB0300E37278 /* UserData.swift */; };
 		48E6E9905A6F9981208D6C88 /* Pods_FullApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC7D0016DBA6948DDA86738 /* Pods_FullApp.framework */; };
@@ -84,6 +86,8 @@
 		35B5928B246CCE1C0069185C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		35BB6381246E01BC00660D0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		35BB6383246E06B700660D0F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		35CEE30E247BDC29002AD70C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		35CEE30F247BDC29002AD70C /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		35EEC2E02475E94000E37278 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		35EEC2E22475EB0300E37278 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		471A2DAA905CCD186E7FF66B /* Pods-FullApp-FullAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullApp-FullAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FullApp-FullAppUITests/Pods-FullApp-FullAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		3502E704246B771400AA3F8F /* FullApp */ = {
 			isa = PBXGroup;
 			children = (
+				35CEE312247BDC91002AD70C /* XIBs */,
 				3508A27D2474A2370016D051 /* Services */,
 				35BB6380246E018900660D0F /* Utillties */,
 				3502E738246B776600AA3F8F /* Supporting Files */,
@@ -201,6 +206,7 @@
 				3508A2822474B23B0016D051 /* RoundedButton.swift */,
 				35ABE8E7247752EB00AFE2C6 /* AvatarCell.swift */,
 				358EB06B2478A07800D2C00B /* CircledImageView.swift */,
+				35CEE30E247BDC29002AD70C /* ProfileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +245,14 @@
 				3508A2802474AFB40016D051 /* Extensions.swift */,
 			);
 			path = Utillties;
+			sourceTree = "<group>";
+		};
+		35CEE312247BDC91002AD70C /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				35CEE30F247BDC29002AD70C /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		3C59FBDA7A365BFA87252A67 /* Frameworks */ = {
@@ -374,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CEE311247BDC29002AD70C /* ProfileVC.xib in Resources */,
 				3502E712246B772600AA3F8F /* LaunchScreen.storyboard in Resources */,
 				3502E70F246B772600AA3F8F /* Assets.xcassets in Resources */,
 				3502E70D246B771400AA3F8F /* Main.storyboard in Resources */,
@@ -516,6 +531,7 @@
 				350E70FE2470B333004772C1 /* CreateAccountVC.swift in Sources */,
 				3502E708246B771400AA3F8F /* SceneDelegate.swift in Sources */,
 				35ABE8E8247752EB00AFE2C6 /* AvatarCell.swift in Sources */,
+				35CEE310247BDC29002AD70C /* ProfileVC.swift in Sources */,
 				3508A2832474B23B0016D051 /* RoundedButton.swift in Sources */,
 				3508A27F2474A2710016D051 /* AuthService.swift in Sources */,
 				35B59289246CC0BB0069185C /* ChannelVC.swift in Sources */,
